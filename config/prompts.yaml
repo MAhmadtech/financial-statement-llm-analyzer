@@ -1,0 +1,176 @@
+# Versioned prompt strategies (Phase 3).
+# Never edit a version in place once experiments have used it - add a new
+# version (v2, v3, ...) and switch active_version. This keeps experiments
+# reproducible.
+
+# Appended to every strategy so all four produce comparable dual output
+# (human-readable report + machine-checkable JSON, per Phase 5).
+json_output_instruction: |
+  After your analysis, output a fenced JSON code block with exactly these keys
+  (use the statement's reported currency/units; write "not reported" when a
+  value cannot be derived from the statement):
+  ```json
+  {
+    "Revenue": "...",
+    "Expenses": "...",
+    "Net Profit": "...",
+    "Current Ratio": "...",
+    "Debt to Equity": "...",
+    "ROE": "...",
+    "Risks": ["..."],
+    "Recommendations": ["..."]
+  }
+  ```
+  Base every number on the statement text only. Do not invent values.
+
+strategies:
+  basic:
+    active_version: v1
+    versions:
+      v1:
+        description: Simple direct analysis request, no persona or structure.
+        template: |
+          Analyze the following financial statement and provide a financial
+          analysis covering the company's performance and position.
+
+          Financial statement:
+          ---
+          {statement_text}
+          ---
+
+  role_based:
+    active_version: v1
+    versions:
+      v1:
+        description: Expert persona (CPA + CFA + senior financial analyst).
+        template: |
+          You are a licensed CPA and CFA charterholder working as a Senior
+          Financial Analyst with 20 years of experience analyzing corporate
+          filings. Apply professional skepticism and cite figures exactly as
+          reported.
+
+          As this expert, analyze the following financial statement. Assess
+          performance, financial position, and financial health, and give your
+          professional opinion of the company's strengths and weaknesses.
+
+          Financial statement:
+          ---
+          {statement_text}
+          ---
+
+  structured:
+    active_version: v1
+    versions:
+      v1:
+        description: Forces a fixed nine-section report skeleton.
+        template: |
+          Analyze the following financial statement. Structure your report
+          with EXACTLY these nine sections, in this order, using these
+          headings:
+
+          1. Executive Summary
+          2. Revenue
+          3. Expenses
+          4. Profitability
+          5. Liquidity
+          6. Solvency
+          7. Financial Ratios
+          8. Risks
+          9. Recommendations
+
+          In "Financial Ratios", compute any ratios the statement supports
+          (current ratio, debt-to-equity, ROE, margins) and show your inputs.
+          In "Risks", identify at least three specific risks grounded in the
+          statement. In "Recommendations", give at least two actionable
+          recommendations tied to reported figures.
+
+          Financial statement:
+          ---
+          {statement_text}
+          ---
+
+  few_shot:
+    active_version: v1
+    versions:
+      v1:
+        description: One worked example (statement -> ideal analysis), then the target.
+        template: |
+          You will analyze a financial statement. First study the example:
+          an example statement followed by the ideal analysis. Then produce
+          an analysis of the same quality, depth, and format for the target
+          statement.
+
+          === EXAMPLE FINANCIAL STATEMENT ===
+          Example Manufacturing Co. - Fiscal Year 2023 (USD millions)
+
+          Income Statement                    FY2023    FY2022
+          Revenue                              500.0     450.0
+          Cost of goods sold                  (300.0)   (275.0)
+          Gross profit                         200.0     175.0
+          Operating expenses                  (120.0)   (110.0)
+          Operating income                      80.0      65.0
+          Interest expense                     (10.0)     (8.0)
+          Income before taxes                   70.0      57.0
+          Income tax expense (21%)             (14.7)    (12.0)
+          Net income                            55.3      45.0
+
+          Balance Sheet (at year end)
+          Cash and equivalents                  40.0      35.0
+          Accounts receivable                   60.0      52.0
+          Inventory                             50.0      41.0
+          Total current assets                 150.0     128.0
+          Total assets                         400.0     360.0
+          Total current liabilities             75.0      70.0
+          Long-term debt                       130.0     120.0
+          Total liabilities                    220.0     205.0
+          Shareholders' equity                 180.0     155.0
+
+          === IDEAL ANALYSIS ===
+          Executive Summary: Example Manufacturing delivered a strong FY2023.
+          Revenue grew 11.1% to $500.0M and net income rose 22.9% to $55.3M,
+          outpacing sales growth thanks to operating leverage. The balance
+          sheet remains healthy, with liquidity comfortably above 2x current
+          obligations, though inventory growth and rising debt deserve watch.
+
+          Revenue: Revenue increased $50.0M (11.1%) year over year to $500.0M,
+          indicating solid demand.
+
+          Expenses: COGS rose 9.1% to $300.0M, slower than revenue, lifting
+          gross margin to 40.0% (FY2022: 38.9%). Operating expenses grew 9.1%
+          to $120.0M, so operating income improved to $80.0M (16.0% margin).
+
+          Profitability: Net income of $55.3M yields an 11.1% net margin
+          (FY2022: 10.0%). Return on equity is 30.7% ($55.3M / $180.0M),
+          exceptional profitability on the shareholders' capital base.
+
+          Liquidity: Current ratio is 2.0 ($150.0M / $75.0M) and quick ratio
+          is 1.33 (($150.0M - $50.0M) / $75.0M) - both comfortable. Note
+          inventory grew 22.0%, faster than sales; monitor for obsolescence.
+
+          Solvency: Debt-to-equity is 1.22 ($220.0M / $180.0M). Interest
+          coverage is 8.0x ($80.0M / $10.0M), so debt service is well
+          supported, but long-term debt rose $10.0M during the year.
+
+          Financial Ratios: Gross margin 40.0%; operating margin 16.0%; net
+          margin 11.1%; current ratio 2.0; quick ratio 1.33; debt-to-equity
+          1.22; interest coverage 8.0x; ROE 30.7%.
+
+          Risks: (1) Inventory build-up (+22.0% vs +11.1% sales) risks
+          write-downs if demand softens. (2) Rising leverage - long-term debt
+          up 8.3% - increases interest burden in a rising-rate environment.
+          (3) Receivables growth (15.4%) slightly ahead of sales may signal
+          loosening credit terms.
+
+          Recommendations: (1) Tighten inventory management toward FY2022
+          turnover levels to release working capital. (2) Use part of the
+          $40.0M cash balance to pay down long-term debt and hold
+          debt-to-equity below 1.2. (3) Formalize receivables collection
+          targets to keep DSO from expanding.
+
+          === TARGET FINANCIAL STATEMENT ===
+          ---
+          {statement_text}
+          ---
+
+          Produce an analysis of the target statement now, matching the
+          example's structure and rigor.

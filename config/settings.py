@@ -58,6 +58,10 @@ MAX_OUTPUT_TOKENS = int(os.getenv("LLM_MAX_OUTPUT_TOKENS", "4096"))
 TIMEOUT_SECONDS = int(os.getenv("LLM_TIMEOUT_SECONDS", "60"))
 RETRY_COUNT = int(os.getenv("LLM_RETRY_COUNT", "3"))
 
+# Statement text passed into a prompt is truncated to this many characters to
+# keep latency and cost bounded on 100+ page 10-K filings.
+MAX_INPUT_CHARS = int(os.getenv("LLM_MAX_INPUT_CHARS", "60000"))
+
 # Backend switch. "gemini" is the only live backend; "gpt41mini" and "llama"
 # are adapter stubs kept for future multi-model comparison (see src/llm/).
 LLM_BACKEND = os.getenv("LLM_BACKEND", "gemini")
