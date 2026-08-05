@@ -1,0 +1,52 @@
+{
+  "statement_id": "statement_12",
+  "doc_name": "CVSHEALTH_2022_10K",
+  "company": "CVS Health",
+  "doc_type": "10k",
+  "doc_period": 2022,
+  "gics_sector": "Health Care",
+  "pdf_path": "data\\raw_statements\\CVSHEALTH_2022_10K.pdf",
+  "expected_summary": "CVS Health 2022 10K filing (Health Care sector). An accurate summary must be consistent with these reported figures: Is CVS Health a capital-intensive business based on FY2022 data? -> Yes, CVS Health requires an extensive asset base to operate, which is evident from its ROA of only 1.82% in 2022 and 3.39% in 2021, though it should be noted that a significant portion of this asset base is goodwill, and CVS's fixed assets/total assets ratio is on the lower side of 5.6%.; Has CVS Health reported any materially important ongoing legal battles from 2022, 2021 and 2020? -> Yes, CVS Health has been involved in multiple ongoing legal battles. Some notable legal dispute areas for CVS are: (1) usual and customary pricing litigation: where it's claimed that CVSâs retail pharmacies overcharged for prescription drugs; (2) PBM litigation and investigations: where it's claimed that that rebate agreements between the drug manufacturers and PBMs caused inflated prices for certain drug products; and (3) controlled substances litigation: legal matters around opioids for which CVS has agreed to pay up to $4.3 billion to claimants in remediation and $625 million to attorneys and fees; Has CVS Health paid dividends to common shareholders in Q2 of FY2022? -> Yes, CVS paid a $ 0.55 dividend per share every quarter in FY2022",
+  "expected_facts": [
+    {
+      "financebench_id": "financebench_id_00790",
+      "question_type": "domain-relevant",
+      "question": "Is CVS Health a capital-intensive business based on FY2022 data?",
+      "answer": "Yes, CVS Health requires an extensive asset base to operate, which is evident from its ROA of only 1.82% in 2022 and 3.39% in 2021, though it should be noted that a significant portion of this asset base is goodwill, and CVS's fixed assets/total assets ratio is on the lower side of 5.6%.",
+      "justification": "Property and equipment, net/Total Assets\n12873/228275\n\nROA=Net Income/Total Assets\n4165/228275\n7898/232999",
+      "evidence_excerpt": "Consolidated Statements of Operations For the Years Ended December 31, In millions, except per share amounts 2022 2021 2020 Revenues: Products $ 226,616 $ 203,738 $ 190,688 Premiums 85,330 76,132 69,364 Services 9,683 11,042 7,856 Net investment income 838 1,199 798 Total revenues 322,467 292,111 268,706 Operating costs: Cost of products sold 196,892 175,803 163,981 Benefit costs 71,281 64,260 55,"
+    },
+    {
+      "financebench_id": "financebench_id_01107",
+      "question_type": "domain-relevant",
+      "question": "Has CVS Health reported any materially important ongoing legal battles from 2022, 2021 and 2020?",
+      "answer": "Yes, CVS Health has been involved in multiple ongoing legal battles. Some notable legal dispute areas for CVS are: (1) usual and customary pricing litigation: where it's claimed that CVSâs retail pharmacies overcharged for prescription drugs; (2) PBM litigation and investigations: where it's claimed that that rebate agreements between the drug manufacturers and PBMs caused inflated prices for certain drug products; and (3) controlled substances litigation: legal matters around opioids for which CVS has agreed to pay up to $4.3 billion to claimants in remediation and $625 million to attorneys and fees",
+      "justification": "",
+      "evidence_excerpt": "Usual and Customary Pricing Litigation The Company and certain current and former directors and officers are named as a defendant in a number of lawsuits that allege that the Companys retail pharmacies overcharged for prescription drugs by not submitting the correct usual and customary price during the claims adjudication process."
+    },
+    {
+      "financebench_id": "financebench_id_01244",
+      "question_type": "domain-relevant",
+      "question": "Has CVS Health paid dividends to common shareholders in Q2 of FY2022?",
+      "answer": "Yes, CVS paid a $ 0.55 dividend per share every quarter in FY2022",
+      "justification": "",
+      "evidence_excerpt": "Dividends During 2022, 2021 and 2020, the quarterly cash dividend was $0.55, $0.50 and $0.50 per share, respectively."
+    }
+  ],
+  "expected_ratios": [],
+  "expected_risks": [
+    {
+      "financebench_id": "financebench_id_01107",
+      "question_type": "domain-relevant",
+      "question": "Has CVS Health reported any materially important ongoing legal battles from 2022, 2021 and 2020?",
+      "answer": "Yes, CVS Health has been involved in multiple ongoing legal battles. Some notable legal dispute areas for CVS are: (1) usual and customary pricing litigation: where it's claimed that CVSâs retail pharmacies overcharged for prescription drugs; (2) PBM litigation and investigations: where it's claimed that that rebate agreements between the drug manufacturers and PBMs caused inflated prices for certain drug products; and (3) controlled substances litigation: legal matters around opioids for which CVS has agreed to pay up to $4.3 billion to claimants in remediation and $625 million to attorneys and fees",
+      "justification": "",
+      "evidence_excerpt": "Usual and Customary Pricing Litigation The Company and certain current and former directors and officers are named as a defendant in a number of lawsuits that allege that the Companys retail pharmacies overcharged for prescription drugs by not submitting the correct usual and customary price during the claims adjudication process."
+    }
+  ],
+  "expected_recommendations": [
+    {
+      "expectation": "Analysis must provide at least two actionable recommendations grounded in figures reported in the statement."
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+category,financebench_id,question,answer
+fact,financebench_id_00283,How much does Pfizer expect to pay to spin off Upjohn in the future in USD million?,77.78
+fact,financebench_id_00724,"For Pfizer, which geographic region had the biggest drop in Q22023 year over year revenues (on a percentage basis)?",Developed Rest of the World
+fact,financebench_id_02419,"As of Q2'2023, is Pfizer spinning off any large business segments?","Yes, it's spinning off Upjohn."

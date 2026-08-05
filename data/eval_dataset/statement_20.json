@@ -1,0 +1,45 @@
+{
+  "statement_id": "statement_20",
+  "doc_name": "ACTIVISIONBLIZZARD_2019_10K",
+  "company": "Activision Blizzard",
+  "doc_type": "10k",
+  "doc_period": 2019,
+  "gics_sector": "Communication Services",
+  "pdf_path": "data\\raw_statements\\ACTIVISIONBLIZZARD_2019_10K.pdf",
+  "expected_summary": "Activision Blizzard 2019 10K filing (Communication Services sector). An accurate summary must be consistent with these reported figures: What is the FY2017 - FY2019 3 year average of capex as a % of revenue for Activision Blizzard? -> 1.9%",
+  "expected_facts": [
+    {
+      "financebench_id": "financebench_id_07966",
+      "question_type": "metrics-generated",
+      "question": "What is the FY2017 - FY2019 3 year average of capex as a % of revenue for Activision Blizzard? Answer in units of percents and round to one decimal place. Calculate (or extract) the answer from the statement of income and the cash flow statement.",
+      "answer": "1.9%",
+      "justification": "The metric in question was calculated using other simpler metrics. The various simpler metrics (from the current and, if relevant, previous fiscal year(s)) used were:\n\nMetric 1: Capital expenditures. This metric was located in the 10K as a single line item named: Capital expenditures.\n\nMetric 2: Total revenue. This metric was located in the 10K as a single line item named: Total net revenues.",
+      "evidence_excerpt": "Table of Contents ACTIVISION BLIZZARD, INC. AND SUBSIDIARIES CONSOLIDATED STATEMENTS OF OPERATIONS (Amounts in millions, except per share data) For the Years Ended December 31, 2019 2018 2017 Net revenues Product sales $ 1,975 $ 2,255 $ 2,110 Subscription, licensing, and other revenues 4,514 5,245 4,907 Total net revenues 6,489 7,500 7,017 Costs and expenses Cost of revenuesproduct sales: Product "
+    }
+  ],
+  "expected_ratios": [
+    {
+      "financebench_id": "financebench_id_02987",
+      "question_type": "metrics-generated",
+      "question": "What is the FY2019 fixed asset turnover ratio for Activision Blizzard? Fixed asset turnover ratio is defined as: FY2019 revenue / (average PP&E between FY2018 and FY2019). Round your answer to two decimal places. Base your judgments on the information provided primarily in the statement of income and the statement of financial position.",
+      "answer": "24.26",
+      "justification": "The metric in question was calculated using other simpler metrics. The various simpler metrics (from the current and, if relevant, previous fiscal year(s)) used were:\n\nMetric 1: Total revenue. This metric was located in the 10K as a single line item named: Total net revenues.\n\nMetric 2: Ppne, net. This metric was located in the 10K as a single line item named: Property and equipment, net.",
+      "evidence_excerpt": "Table of Contents ACTIVISION BLIZZARD, INC. AND SUBSIDIARIES CONSOLIDATED BALANCE SHEETS (Amounts in millions, except share data) At December 31, 2019 At December 31, 2018 Assets Current assets: Cash and cash equivalents $ 5,794 $ 4,225 Accounts receivable, net of allowances of $132 and $190, at December 31, 2019 and December 31, 2018, respectively 848 1,035 Inventories, net 32 43 Software develop"
+    }
+  ],
+  "expected_risks": [],
+  "expected_recommendations": [
+    {
+      "expectation": "Analysis must provide at least two actionable recommendations grounded in figures reported in the statement."
+    },
+    {
+      "expectation": "Recommendations should address the company's asset turnover."
+    },
+    {
+      "expectation": "Recommendations should address the company's ratio."
+    },
+    {
+      "expectation": "Recommendations should address the company's turnover."
+    }
+  ]
+}

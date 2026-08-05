@@ -1,0 +1,62 @@
+{
+  "statement_id": "statement_08",
+  "doc_name": "3M_2023Q2_10Q",
+  "company": "3M",
+  "doc_type": "10q",
+  "doc_period": 2023,
+  "gics_sector": "Industrials",
+  "pdf_path": "data\\raw_statements\\3M_2023Q2_10Q.pdf",
+  "expected_summary": "3M 2023 10Q filing (Industrials sector). An accurate summary must be consistent with these reported figures: Which debt securities are registered to trade on a national securities exchange under 3M's name as of Q2 of 2023? -> Following debt securities registered under 3M's name are listed to trade on the New York Stock Exchange:\n-1.500% Notes due 2026 (Trading Symbol: MMM26)\n-1.750% Notes due 2030 (Trading Symbol: MMM30)\n-1.500% Notes due 2031 (Trading Symbol: MMM31); Does 3M maintain a stable trend of dividend distribution? -> Yes, not only they distribute the dividends on a routine basis, 3M has also been increasing the per share dividend for consecutive 65 years",
+  "expected_facts": [
+    {
+      "financebench_id": "financebench_id_00941",
+      "question_type": "domain-relevant",
+      "question": "Which debt securities are registered to trade on a national securities exchange under 3M's name as of Q2 of 2023?",
+      "answer": "Following debt securities registered under 3M's name are listed to trade on the New York Stock Exchange:\n-1.500% Notes due 2026 (Trading Symbol: MMM26)\n-1.750% Notes due 2030 (Trading Symbol: MMM30)\n-1.500% Notes due 2031 (Trading Symbol: MMM31)",
+      "justification": "",
+      "evidence_excerpt": "Title of each class Trading Symbol(s) Name of each exchange on which registered Common Stock, Par Value $.01 Per Share MMM New York Stock Exchange MMM Chicago Stock Exchange, Inc. 1.500% Notes due 2026 MMM26 New York Stock Exchange 1.750% Notes due 2030 MMM30 New York Stock Exchange 1.500% Notes due 2031 MMM31 New York Stock Exchange"
+    },
+    {
+      "financebench_id": "financebench_id_01858",
+      "question_type": "novel-generated",
+      "question": "Does 3M maintain a stable trend of dividend distribution?",
+      "answer": "Yes, not only they distribute the dividends on a routine basis, 3M has also been increasing the per share dividend for consecutive 65 years",
+      "justification": "",
+      "evidence_excerpt": "This marked the 65th consecutive year of dividend increases for 3M."
+    }
+  ],
+  "expected_ratios": [
+    {
+      "financebench_id": "financebench_id_00807",
+      "question_type": "domain-relevant",
+      "question": "Does 3M have a reasonably healthy liquidity profile based on its quick ratio for Q2 of FY2023? If the quick ratio is not relevant to measure liquidity, please state that and explain why.",
+      "answer": "No. The quick ratio for 3M was 0.96 by Jun'23 close, which needs a bit of an improvement to touch the 1x mark",
+      "justification": "Quick Ratio= (Total current assets-Total inventories)/Total current liabilities\n(15,754-5,280)/10,936",
+      "evidence_excerpt": "3M Company and Subsidiaries Consolidated Balance Sheet (Unaudited) (Dollars in millions, except per share amount) June 30, 2023 December 31, 2022 Assets Current assets Cash and cash equivalents $ 4,258 $ 3,655 Marketable securities current 56 238 Accounts receivable net of allowances of $160 and $174 4,947 4,532 Inventories Finished goods 2,526 2,497 Work in process 1,527 1,606 Raw materials and s"
+    }
+  ],
+  "expected_risks": [
+    {
+      "financebench_id": "financebench_id_00807",
+      "question_type": "domain-relevant",
+      "question": "Does 3M have a reasonably healthy liquidity profile based on its quick ratio for Q2 of FY2023? If the quick ratio is not relevant to measure liquidity, please state that and explain why.",
+      "answer": "No. The quick ratio for 3M was 0.96 by Jun'23 close, which needs a bit of an improvement to touch the 1x mark",
+      "justification": "Quick Ratio= (Total current assets-Total inventories)/Total current liabilities\n(15,754-5,280)/10,936",
+      "evidence_excerpt": "3M Company and Subsidiaries Consolidated Balance Sheet (Unaudited) (Dollars in millions, except per share amount) June 30, 2023 December 31, 2022 Assets Current assets Cash and cash equivalents $ 4,258 $ 3,655 Marketable securities current 56 238 Accounts receivable net of allowances of $160 and $174 4,947 4,532 Inventories Finished goods 2,526 2,497 Work in process 1,527 1,606 Raw materials and s"
+    }
+  ],
+  "expected_recommendations": [
+    {
+      "expectation": "Analysis must provide at least two actionable recommendations grounded in figures reported in the statement."
+    },
+    {
+      "expectation": "Recommendations should address the company's liquidity profile."
+    },
+    {
+      "expectation": "Recommendations should address the company's quick ratio."
+    },
+    {
+      "expectation": "Recommendations should address the company's ratio."
+    }
+  ]
+}

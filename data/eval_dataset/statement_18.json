@@ -1,0 +1,62 @@
+{
+  "statement_id": "statement_18",
+  "doc_name": "VERIZON_2022_10K",
+  "company": "Verizon",
+  "doc_type": "10k",
+  "doc_period": 2022,
+  "gics_sector": "Communication Services",
+  "pdf_path": "data\\raw_statements\\VERIZON_2022_10K.pdf",
+  "expected_summary": "Verizon 2022 10K filing (Communication Services sector). An accurate summary must be consistent with these reported figures: Is Verizon a capital intensive business based on FY 2022 data? -> Yes. Verizon's capital intensity ratio was approximately 2.774729. This means that it took approximately $2.77 of assets to generate $1 of revenue and thus, Verizon can be considered capital intensive.; Has Verizon increased its debt on balance sheet between 2022 and the 2021 fiscal period? -> No. Verizon's debt decreased by $229 million.",
+  "expected_facts": [
+    {
+      "financebench_id": "financebench_id_00215",
+      "question_type": "domain-relevant",
+      "question": "Is Verizon a capital intensive business based on FY 2022 data?",
+      "answer": "Yes. Verizon's capital intensity ratio was approximately 2.774729. This means that it took approximately $2.77 of assets to generate $1 of revenue and thus, Verizon can be considered capital intensive.",
+      "justification": "capital intensity ratio = total asset / revenue = 379680/ 136835 = 2.774729, which is relatively high",
+      "evidence_excerpt": "Consolidated Balance Sheets Verizon Communications Inc. and Subsidiaries (dollars in millions, except per share amounts) At December 31, 2022 2021 Assets Current assets Cash and cash equivalents $ 2,605 $ 2,921 Accounts receivable 25,332 24,742 Less Allowance for credit losses 826 896 Accounts receivable, net 24,506 23,846 Inventories 2,388 3,055 Prepaid expenses and other 8,358 6,906 Total curren"
+    },
+    {
+      "financebench_id": "financebench_id_00566",
+      "question_type": "domain-relevant",
+      "question": "Has Verizon increased its debt on balance sheet between 2022 and the 2021 fiscal period?",
+      "answer": "No. Verizon's debt decreased by $229 million.",
+      "justification": "debt change = debt in 2022 - debt in 2021 = 150639 - 150868 = -229",
+      "evidence_excerpt": "At December 31, Maturities Interest Rates % 2022 2021 Verizon Communications < 5 Years 0.75 - 5.82 $ 23,929 $ 18,406 5-10 Years 1.50 - 7.88 42,637 43,225 > 10 Years 1.13 - 8.95 60,134 73,520 < 5 Years Floating (1) 2,992 4,086 5-10 Years Floating (1) 3,029 824 Alltel Corporation 5-10 Years 6.80 - 7.88 94 38 > 10 Years N/A N/A 58 Operating telephone company subsidiariesdebentures < 5 Years N/A N/A 1"
+    }
+  ],
+  "expected_ratios": [
+    {
+      "financebench_id": "financebench_id_00216",
+      "question_type": "domain-relevant",
+      "question": "Does Verizon have a reasonably healthy liquidity profile based on its quick ratio for FY 2022? If the quick ratio is not relevant to measure liquidity, please state that and explain why.",
+      "answer": "No. The quick ratio was approximately 0.54 for Verizon. It indicated that Verizon does not have a healthy liquidity profile.",
+      "justification": "Quick ratio = (current assets - inventories - prepaid expenses) / current liabilities = (37857 - 2388 - 8358) / 50171 = 0.5403719",
+      "evidence_excerpt": "Consolidated Balance Sheets Verizon Communications Inc. and Subsidiaries (dollars in millions, except per share amounts) At December 31, 2022 2021 Assets Current assets Cash and cash equivalents $ 2,605 $ 2,921 Accounts receivable 25,332 24,742 Less Allowance for credit losses 826 896 Accounts receivable, net 24,506 23,846 Inventories 2,388 3,055 Prepaid expenses and other 8,358 6,906 Total curren"
+    }
+  ],
+  "expected_risks": [
+    {
+      "financebench_id": "financebench_id_00216",
+      "question_type": "domain-relevant",
+      "question": "Does Verizon have a reasonably healthy liquidity profile based on its quick ratio for FY 2022? If the quick ratio is not relevant to measure liquidity, please state that and explain why.",
+      "answer": "No. The quick ratio was approximately 0.54 for Verizon. It indicated that Verizon does not have a healthy liquidity profile.",
+      "justification": "Quick ratio = (current assets - inventories - prepaid expenses) / current liabilities = (37857 - 2388 - 8358) / 50171 = 0.5403719",
+      "evidence_excerpt": "Consolidated Balance Sheets Verizon Communications Inc. and Subsidiaries (dollars in millions, except per share amounts) At December 31, 2022 2021 Assets Current assets Cash and cash equivalents $ 2,605 $ 2,921 Accounts receivable 25,332 24,742 Less Allowance for credit losses 826 896 Accounts receivable, net 24,506 23,846 Inventories 2,388 3,055 Prepaid expenses and other 8,358 6,906 Total curren"
+    }
+  ],
+  "expected_recommendations": [
+    {
+      "expectation": "Analysis must provide at least two actionable recommendations grounded in figures reported in the statement."
+    },
+    {
+      "expectation": "Recommendations should address the company's liquidity profile."
+    },
+    {
+      "expectation": "Recommendations should address the company's quick ratio."
+    },
+    {
+      "expectation": "Recommendations should address the company's ratio."
+    }
+  ]
+}

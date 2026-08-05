@@ -1,0 +1,4 @@
+category,financebench_id,question,answer
+fact,financebench_id_00302,Did Pfizer grow its PPNE between FY20 and FY21?,"Yes, change in PPNE was positive year over year"
+fact,financebench_id_02416,What are three main companies acquired by Pfizer mentioned in this 10K report?,"Trillium, Array, and Therachon"
+ratio,financebench_id_00702,Were there any potential events that are not in Pfizer's standard business operations that substantially increased net income in 2019?,"Yes, the gain on completion of Consumer Healthcare JV Transaction"

@@ -1,0 +1,56 @@
+{
+  "statement_id": "statement_07",
+  "doc_name": "3M_2022_10K",
+  "company": "3M",
+  "doc_type": "10k",
+  "doc_period": 2022,
+  "gics_sector": "Industrials",
+  "pdf_path": "data\\raw_statements\\3M_2022_10K.pdf",
+  "expected_summary": "3M 2022 10K filing (Industrials sector). An accurate summary must be consistent with these reported figures: Is 3M a capital-intensive business based on FY2022 data? -> No, the company is managing its CAPEX and Fixed Assets pretty efficiently, which is evident from below key metrics:\nCAPEX/Revenue Ratio: 5.1%\nFixed assets/Total Assets: 20%\nReturn on Assets= 12.4%; If we exclude the impact of M&A, which segment has dragged down 3M's overall growth in 2022? -> The consumer segment shrunk by 0.9% organically.",
+  "expected_facts": [
+    {
+      "financebench_id": "financebench_id_00499",
+      "question_type": "domain-relevant",
+      "question": "Is 3M a capital-intensive business based on FY2022 data?",
+      "answer": "No, the company is managing its CAPEX and Fixed Assets pretty efficiently, which is evident from below key metrics:\nCAPEX/Revenue Ratio: 5.1%\nFixed assets/Total Assets: 20%\nReturn on Assets= 12.4%",
+      "justification": "CAPEX/Revenue\nFixed Assets/Total Assets\nROA=Net Income/Total Assets",
+      "evidence_excerpt": "3M Company and Subsidiaries Consolidated Statement of Income Years ended December 31 (Millions, except per share amounts) 2022 2021 2020 Net sales $ 34,229 $ 35,355 $ 32,184"
+    },
+    {
+      "financebench_id": "financebench_id_01865",
+      "question_type": "novel-generated",
+      "question": "If we exclude the impact of M&A, which segment has dragged down 3M's overall growth in 2022?",
+      "answer": "The consumer segment shrunk by 0.9% organically.",
+      "justification": "",
+      "evidence_excerpt": "Worldwide Sales Change By Business Segment Organic sales Acquisitions Divestitures Translation Total sales change Safety and Industrial 1.0 % % % (4.2) % (3.2) % Transportation and Electronics 1.2 (0.5) (4.6) (3.9) Health Care 3.2 (1.4) (3.8) (2.0) Consumer (0.9) (0.4) (2.6) (3.9) Total Company 1.2 (0.5) (3.9) (3.2)"
+    }
+  ],
+  "expected_ratios": [
+    {
+      "financebench_id": "financebench_id_01226",
+      "question_type": "domain-relevant",
+      "question": "What drove operating margin change as of FY2022 for 3M? If operating margin is not a useful metric for a company like this, then please state that and explain why.",
+      "answer": "Operating Margin for 3M in FY2022 has decreased by 1.7% primarily due to: \n-Decrease in gross Margin\n-mostly one-off charges including Combat Arms Earplugs litigation, impairment related to exiting PFAS manufacturing, costs related to exiting Russia and divestiture-related restructuring\ncharges",
+      "justification": "",
+      "evidence_excerpt": "SG&A, measured as a percent of sales, increased in 2022 when compared to the same period last year. SG&A was impacted by increased special item costs for significant litigation primarily related to steps toward resolving Combat Arms Earplugs litigation (discussed in Note 16) resulting in a 2022 second quarter pre-tax charge of approximately $1.2 billion, certain impairment costs related to exiting"
+    }
+  ],
+  "expected_risks": [
+    {
+      "financebench_id": "financebench_id_01226",
+      "question_type": "domain-relevant",
+      "question": "What drove operating margin change as of FY2022 for 3M? If operating margin is not a useful metric for a company like this, then please state that and explain why.",
+      "answer": "Operating Margin for 3M in FY2022 has decreased by 1.7% primarily due to: \n-Decrease in gross Margin\n-mostly one-off charges including Combat Arms Earplugs litigation, impairment related to exiting PFAS manufacturing, costs related to exiting Russia and divestiture-related restructuring\ncharges",
+      "justification": "",
+      "evidence_excerpt": "SG&A, measured as a percent of sales, increased in 2022 when compared to the same period last year. SG&A was impacted by increased special item costs for significant litigation primarily related to steps toward resolving Combat Arms Earplugs litigation (discussed in Note 16) resulting in a 2022 second quarter pre-tax charge of approximately $1.2 billion, certain impairment costs related to exiting"
+    }
+  ],
+  "expected_recommendations": [
+    {
+      "expectation": "Analysis must provide at least two actionable recommendations grounded in figures reported in the statement."
+    },
+    {
+      "expectation": "Recommendations should address the company's margin."
+    }
+  ]
+}

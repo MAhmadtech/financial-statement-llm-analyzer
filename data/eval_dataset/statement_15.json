@@ -1,0 +1,62 @@
+{
+  "statement_id": "statement_15",
+  "doc_name": "MGMRESORTS_2022Q4_EARNINGS",
+  "company": "MGM Resorts",
+  "doc_type": "Earnings",
+  "doc_period": 2022,
+  "gics_sector": "Consumer Discretionary",
+  "pdf_path": "data\\raw_statements\\MGMRESORTS_2022Q4_EARNINGS.pdf",
+  "expected_summary": "MGM Resorts 2022 EARNINGS filing (Consumer Discretionary sector). An accurate summary must be consistent with these reported figures: Which region had the Highest EBITDAR Contribution for MGM during FY2022? -> Las Vegas resorts contributed ~90% of company level EBITDAR during FY2022.; Which region had the worst topline performance for MGM during FY2022? -> MGM China experienced the worst topline performance amongst the other regions presented. Its revenue declined 44% in FY2022 whereas the other regions presented increased their revenues.",
+  "expected_facts": [
+    {
+      "financebench_id": "financebench_id_00382",
+      "question_type": "novel-generated",
+      "question": "Which region had the Highest EBITDAR Contribution for MGM during FY2022?",
+      "answer": "Las Vegas resorts contributed ~90% of company level EBITDAR during FY2022.",
+      "justification": "3142308/3497254",
+      "evidence_excerpt": "dited) Three months ended Twelve months ended December 31, 2022 December 31, 2021 December 31, 2022 December 31, 2021 Las Vegas Strip Resorts $ 877,052 $ 698,739 $ 3,142,308 $ 1,738,211 Regional Operations 319,517 309,250 1,294,630 1,217,814 MGM China (54,979) 5,015 (203,136) 25,367 Unconsolidated affiliates(1) (43,029) (49,698) (222,079) (131,590) Management and other operations (3,037) 2,087 (11"
+    },
+    {
+      "financebench_id": "financebench_id_01912",
+      "question_type": "novel-generated",
+      "question": "Which region had the worst topline performance for MGM during FY2022?",
+      "answer": "MGM China experienced the worst topline performance amongst the other regions presented. Its revenue declined 44% in FY2022 whereas the other regions presented increased their revenues.",
+      "justification": "",
+      "evidence_excerpt": "Las Vegas Strip Resorts Net revenues of $8.4 billion in the current year compared to $4.7 billion in the prior year, an increase of 77%;"
+    }
+  ],
+  "expected_ratios": [
+    {
+      "financebench_id": "financebench_id_01911",
+      "question_type": "novel-generated",
+      "question": "What was MGM's interest coverage ratio using FY2022 Adjusted EBIT as the numerator and annual Interest Expense as the denominator?",
+      "answer": "As adjusted EBIT is negative, coverage ratio is zero",
+      "justification": "",
+      "evidence_excerpt": "dited) Three months ended Twelve months ended December 31, 2022 December 31, 2021 December 31, 2022 December 31, 2021 Net income attributable to MGM Resorts International $ 284,002 $ 131,013 $ 1,473,093 $ 1,254,370 Plus: Net loss attributable to noncontrolling interests (604,016) (14,926) (1,266,362) (45,981) Net income (loss) (320,014) 116,087 206,731 1,208,389 Provision for income taxes 285,937 "
+    }
+  ],
+  "expected_risks": [
+    {
+      "financebench_id": "financebench_id_01912",
+      "question_type": "novel-generated",
+      "question": "Which region had the worst topline performance for MGM during FY2022?",
+      "answer": "MGM China experienced the worst topline performance amongst the other regions presented. Its revenue declined 44% in FY2022 whereas the other regions presented increased their revenues.",
+      "justification": "",
+      "evidence_excerpt": "Las Vegas Strip Resorts Net revenues of $8.4 billion in the current year compared to $4.7 billion in the prior year, an increase of 77%;"
+    }
+  ],
+  "expected_recommendations": [
+    {
+      "expectation": "Analysis must provide at least two actionable recommendations grounded in figures reported in the statement."
+    },
+    {
+      "expectation": "Recommendations should address the company's coverage."
+    },
+    {
+      "expectation": "Recommendations should address the company's interest coverage."
+    },
+    {
+      "expectation": "Recommendations should address the company's ratio."
+    }
+  ]
+}

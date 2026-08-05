@@ -1,0 +1,82 @@
+{
+  "statement_id": "statement_02",
+  "doc_name": "AMERICANEXPRESS_2022_10K",
+  "company": "American Express",
+  "doc_type": "10k",
+  "doc_period": 2022,
+  "gics_sector": "Financials",
+  "pdf_path": "data\\raw_statements\\AMERICANEXPRESS_2022_10K.pdf",
+  "expected_summary": "American Express 2022 10K filing (Financials sector). An accurate summary must be consistent with these reported figures: Which debt securities are registered to trade on a national securities exchange under American Express' name as of 2022? -> There are none; What are the geographies that American Express primarily operates in as of 2022? -> United States, EMEA, APAC, and LACC; What was the largest liability in American Express's Balance Sheet in 2022? -> Customer deposits; Was American Express able to retain card members during 2022? -> Yes",
+  "expected_facts": [
+    {
+      "financebench_id": "financebench_id_00476",
+      "question_type": "domain-relevant",
+      "question": "Which debt securities are registered to trade on a national securities exchange under American Express' name as of 2022?",
+      "answer": "There are none",
+      "justification": "No debt securities are listed under the securities registered pursuant to Section 12(b) of the Act, which implies there are none",
+      "evidence_excerpt": "Registrants telephone number, including area code: (212) 640-2000 Securities registered pursuant to Section 12(b) of the Act: Title of each class Trading Symbol(s) Name of each exchange on which registered Common Shares (par value $0.20 per Share) AXP New York Stock Exchange Securities registered pursuant to section 12(g) of the Act: None"
+    },
+    {
+      "financebench_id": "financebench_id_01028",
+      "question_type": "domain-relevant",
+      "question": "What are the geographies that American Express primarily operates in as of 2022?",
+      "answer": "United States, EMEA, APAC, and LACC",
+      "justification": "",
+      "evidence_excerpt": "(Millions) United States EMEA APAC LACC Other Unallocated Consolidated 2022 Total revenues net of interest expense $ 41,396 $ 4,871 $ 3,835 $ 2,917 $ (157) $ 52,862 Pretax income (loss) from continuing operations 10,383 550 376 500 (2,224) 9,585 2021 Total revenues net of interest expense $ 33,103 $ 3,643 $ 3,418 $ 2,238 $ (22) $ 42,380 Pretax income (loss) from continuing operations 10,325 460 42"
+    },
+    {
+      "financebench_id": "financebench_id_01964",
+      "question_type": "novel-generated",
+      "question": "What was the largest liability in American Express's Balance Sheet in 2022?",
+      "answer": "Customer deposits",
+      "justification": "",
+      "evidence_excerpt": "CONSOLIDATED BALANCE SHEETS December 31 (Millions, except share data) 2022 2021 Assets Cash and cash equivalents Cash and due from banks (includes restricted cash of consolidated variable interest entities: 2022, $5; 2021, $11) $ 5,510 $ 1,292 Interest-bearing deposits in other banks (includes securities purchased under resale agreements: 2022, $318; 2021, $463) 28,097 20,548 Short-term investment"
+    },
+    {
+      "financebench_id": "financebench_id_01981",
+      "question_type": "novel-generated",
+      "question": "Was American Express able to retain card members during 2022?",
+      "answer": "Yes",
+      "justification": "",
+      "evidence_excerpt": "Net card fees increased 17 percent year over-year, as new card acquisitions reached record levels in 2022 and Card Member retention remained high, demonstrating the impact of investments we have made in our premium value propositions"
+    }
+  ],
+  "expected_ratios": [
+    {
+      "financebench_id": "financebench_id_00723",
+      "question_type": "domain-relevant",
+      "question": "Does AMEX have an improving operating margin profile as of 2022? If operating margin is not a useful metric for a company like this, then state that and explain why.",
+      "answer": "Performance is not measured through operating margin",
+      "justification": "It's a financial services company and performance is measured through the Net Interest Margin.",
+      "evidence_excerpt": "CONSOLIDATED STATEMENTS OF INCOME Year Ended December 31 (Millions, except per share amounts) 2022 2021 2020 Revenues Non-interest revenues Discount revenue $ 30,739 $ 24,563 $ 19,435 Net card fees 6,070 5,195 4,664 Service fees and other revenue 4,521 3,316 2,702 Processed revenue 1,637 1,556 1,301 Total non-interest revenues 42,967 34,630 28,102 Interest income Interest on loans 11,967 8,850 9,7"
+    },
+    {
+      "financebench_id": "financebench_id_00720",
+      "question_type": "domain-relevant",
+      "question": "What drove gross margin change as of the FY2022 for American Express? If gross margin is not a useful metric for a company like this, then please state that and explain why.",
+      "answer": "Performance is not measured through gross margin",
+      "justification": "It's a financial services company and performance is measured through the Net Interest Margin.",
+      "evidence_excerpt": "CONSOLIDATED STATEMENTS OF INCOME Year Ended December 31 (Millions, except per share amounts) 2022 2021 2020 Revenues Non-interest revenues Discount revenue $ 30,739 $ 24,563 $ 19,435 Net card fees 6,070 5,195 4,664 Service fees and other revenue 4,521 3,316 2,702 Processed revenue 1,637 1,556 1,301 Total non-interest revenues 42,967 34,630 28,102 Interest income Interest on loans 11,967 8,850 9,7"
+    },
+    {
+      "financebench_id": "financebench_id_01351",
+      "question_type": "domain-relevant",
+      "question": "How much has the effective tax rate of American Express changed between FY2021 and FY2022?",
+      "answer": "The effective tax rate for American Express has changed/dropped from 24.6% in FY 2021 to 21.6% in FY 2022.",
+      "justification": "",
+      "evidence_excerpt": "TABLE 1: SUMMARY OF FINANCIAL PERFORMANCE Years Ended December 31, Change Change (Millions, except percentages, per share amounts and where indicated) 2022 2021 2020 2022 vs. 2021 2021 vs. 2020 Selected Income Statement Data Total revenues net of interest expense $ 52,862 $ 42,380 $ 36,087 $ 10,482 25 % $ 6,293 17 % Provisions for credit losses 2,182 (1,419) 4,730 3,601 # (6,149) # Expenses 41,095"
+    }
+  ],
+  "expected_risks": [],
+  "expected_recommendations": [
+    {
+      "expectation": "Analysis must provide at least two actionable recommendations grounded in figures reported in the statement."
+    },
+    {
+      "expectation": "Recommendations should address the company's margin."
+    },
+    {
+      "expectation": "Recommendations should address the company's tax rate."
+    }
+  ]
+}

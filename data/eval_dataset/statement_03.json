@@ -1,0 +1,91 @@
+{
+  "statement_id": "statement_03",
+  "doc_name": "BOEING_2022_10K",
+  "company": "Boeing",
+  "doc_type": "10k",
+  "doc_period": 2022,
+  "gics_sector": "Industrials",
+  "pdf_path": "data\\raw_statements\\BOEING_2022_10K.pdf",
+  "expected_summary": "Boeing 2022 10K filing (Industrials sector). An accurate summary must be consistent with these reported figures: Are there any product categories / service categories that represent more than 20% of Boeing's revenue for FY2022? -> Yes. Boeing has product and service categories that represent more than 20% of Boeing's revenue for FY2022. These categories are Commercial Airplanes which comprises 39% of total revenue, Defence which comprises 35% of total revenue and Services which comprises 26% of total revenue.; Has Boeing reported any materially important ongoing legal battles from FY2022? -> Yes. Multiple lawsuits have been filed against Boeing resulting from a 2018 Lion Air crash and a 2019 Ethiopian Airlines crash.; Who are the primary customers of Boeing as of FY2022? -> Boeing's primary customers as of FY2022 are a limited number of commercial airlines and the US government. The US government accounted for 40% of Boeing's total revenues in FY2022.; Is Boeing's business subject to cyclicality? -> Yes, Boeing's business is subject to cyclicality due to its exposure to the airline industry which is a cyclical industry.; What production rate changes is Boeing forecasting for FY2023? -> Boeing forecasts an increase in the production rates for the 737, 777X and 787 aircrafts in 2023.",
+  "expected_facts": [
+    {
+      "financebench_id": "financebench_id_00517",
+      "question_type": "domain-relevant",
+      "question": "Are there any product categories / service categories that represent more than 20% of Boeing's revenue for FY2022?",
+      "answer": "Yes. Boeing has product and service categories that represent more than 20% of Boeing's revenue for FY2022. These categories are Commercial Airplanes which comprises 39% of total revenue, Defence which comprises 35% of total revenue and Services which comprises 26% of total revenue.",
+      "justification": "Commercial Airplanes%=Revenues: Commercial Airplanes/Total revenues*100=25,867/66,608*100=39%. Defence%=Defense, Space & Security/Total revenues*100=23,162/66,608*100=35%. Services%=Global Services/Total revenues*100=17,611/66,608*100=26%.",
+      "evidence_excerpt": "The Boeing Company and Subsidiaries Notes to the Consolidated Financial Statements Summary of Business Segment Data (Dollars in millions) Years ended December 31, 2022 2021 2020 Revenues: Commercial Airplanes $25,867 $19,493 $16,162 Defense, Space & Security 23,162 26,540 26,257 Global Services 17,611 16,328 15,543 Boeing Capital 199 272 261 Unallocated items, eliminations and other (231) (347) (6"
+    },
+    {
+      "financebench_id": "financebench_id_01091",
+      "question_type": "domain-relevant",
+      "question": "Has Boeing reported any materially important ongoing legal battles from FY2022?",
+      "answer": "Yes. Multiple lawsuits have been filed against Boeing resulting from a 2018 Lion Air crash and a 2019 Ethiopian Airlines crash.",
+      "justification": "",
+      "evidence_excerpt": "Multiple legal actions have been filed against us as a result of the October 29, 2018 accident of Lion Air Flight 610 and the March 10, 2019 accident of Ethiopian Airlines Flight 302."
+    },
+    {
+      "financebench_id": "financebench_id_01290",
+      "question_type": "domain-relevant",
+      "question": "Who are the primary customers of Boeing as of FY2022?",
+      "answer": "Boeing's primary customers as of FY2022 are a limited number of commercial airlines and the US government. The US government accounted for 40% of Boeing's total revenues in FY2022.",
+      "justification": "",
+      "evidence_excerpt": "We derive a significant portion of our revenues from a limited number of commercial airlines."
+    },
+    {
+      "financebench_id": "financebench_id_00464",
+      "question_type": "novel-generated",
+      "question": "Is Boeing's business subject to cyclicality?",
+      "answer": "Yes, Boeing's business is subject to cyclicality due to its exposure to the airline industry which is a cyclical industry.",
+      "justification": "A major portion of Boeing's revenue is derived from the sale of aircraft to commercial airlines. The commercial airlines business is cyclical, and subject to significant profit swings.",
+      "evidence_excerpt": "Historically, the airline industry has been cyclical and very competitive and has experienced significant profit swings and constant challenges to be more cost competitive."
+    },
+    {
+      "financebench_id": "financebench_id_00494",
+      "question_type": "novel-generated",
+      "question": "What production rate changes is Boeing forecasting for FY2023?",
+      "answer": "Boeing forecasts an increase in the production rates for the 737, 777X and 787 aircrafts in 2023.",
+      "justification": "Boeing plans to gradually increase production rates for the 737 and 787 and to resume production of 777X.",
+      "evidence_excerpt": "We must minimize disruption caused by production changes, achieve operational stability and implement productivity improvements in order to meet customer demand and maintain our profitability. We have previously announced plans to adjust production rates on several of our commercial aircraft programs. The 787 program is currently producing at low rates and we expect to gradually increase to 5 per "
+    }
+  ],
+  "expected_ratios": [
+    {
+      "financebench_id": "financebench_id_00678",
+      "question_type": "domain-relevant",
+      "question": "Does Boeing have an improving gross margin profile as of FY2022? If gross margin is not a useful metric for a company like this, then state that and explain why.",
+      "answer": "Yes. Boeing has an improving gross margin profile as of FY2022. Gross profit improved from $3,017 million in FY2021 to $3,502 million in FY2022. Gross margin % improved from 4.8% in FY2021 to 5.3% in FY2022.",
+      "justification": "Gross margin%=Gross margin/Total revenues*100=3,502/66,608*100=5.3% for 2022 and 3,017/62,286*100=4.8% for 2021.",
+      "evidence_excerpt": "The Boeing Company and Subsidiaries Consolidated Statements of Operations (Dollars in millions, except per share data) Years ended December 31, 2022 2021 2020 Sales of products $55,893 $51,386 $47,142 Sales of services 10,715 10,900 11,016 Total revenues 66,608 62,286 58,158 Cost of products (53,969) (49,954) (54,568) Cost of services (9,109) (9,283) (9,232) Boeing Capital interest expense (28) (3"
+    },
+    {
+      "financebench_id": "financebench_id_00585",
+      "question_type": "novel-generated",
+      "question": "How does Boeing's effective tax rate in FY2022 compare to FY2021?",
+      "answer": "Effective tax rate in FY2022 was 0.62%, compared to  -14.76% in FY2021.",
+      "justification": "Effective tax rate=Income tax (expense) benefit/ Loss before income taxes*100=(31)/(5,022)*100=0.62% in 2022 and 743/(5,033)*100=-14.76%.",
+      "evidence_excerpt": "The Boeing Company and Subsidiaries Consolidated Statements of Operations (Dollars in millions, except per share data) Years ended December 31, 2022 2021 2020 Sales of products $55,893 $51,386 $47,142 Sales of services 10,715 10,900 11,016 Total revenues 66,608 62,286 58,158 Cost of products (53,969) (49,954) (54,568) Cost of services (9,109) (9,283) (9,232) Boeing Capital interest expense (28) (3"
+    }
+  ],
+  "expected_risks": [
+    {
+      "financebench_id": "financebench_id_01091",
+      "question_type": "domain-relevant",
+      "question": "Has Boeing reported any materially important ongoing legal battles from FY2022?",
+      "answer": "Yes. Multiple lawsuits have been filed against Boeing resulting from a 2018 Lion Air crash and a 2019 Ethiopian Airlines crash.",
+      "justification": "",
+      "evidence_excerpt": "Multiple legal actions have been filed against us as a result of the October 29, 2018 accident of Lion Air Flight 610 and the March 10, 2019 accident of Ethiopian Airlines Flight 302."
+    }
+  ],
+  "expected_recommendations": [
+    {
+      "expectation": "Analysis must provide at least two actionable recommendations grounded in figures reported in the statement."
+    },
+    {
+      "expectation": "Recommendations should address the company's margin."
+    },
+    {
+      "expectation": "Recommendations should address the company's tax rate."
+    }
+  ]
+}

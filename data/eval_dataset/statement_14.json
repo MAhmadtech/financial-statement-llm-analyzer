@@ -1,0 +1,46 @@
+{
+  "statement_id": "statement_14",
+  "doc_name": "JOHNSON_JOHNSON_2023_8K_dated-2023-08-30",
+  "company": "Johnson & Johnson",
+  "doc_type": "8k",
+  "doc_period": 2023,
+  "gics_sector": "Health Care",
+  "pdf_path": "data\\raw_statements\\JOHNSON_JOHNSON_2023_8K_dated-2023-08-30.pdf",
+  "expected_summary": "Johnson & Johnson 2023 8K filing (Health Care sector). An accurate summary must be consistent with these reported figures: ",
+  "expected_facts": [],
+  "expected_ratios": [
+    {
+      "financebench_id": "financebench_id_01488",
+      "question_type": "novel-generated",
+      "question": "Which business segment of JnJ will be treated as a discontinued operation from August 30, 2023 onward?",
+      "answer": "The Consumer Health business segment will be treated as a discontinued operation from August 30, 2023 onward.",
+      "justification": "",
+      "evidence_excerpt": "Exhibit 99.1 Johnson & Johnson Announces Updated Financials and 2023 Guidance Following Completion of the Kenvue Separation Company expects increased 2023 Reported Sales Growth of 7.0% - 8.0%, Operational Sales Growth of 7.5% - 8.5%, and Adjusted Operational Sales Growth of 6.2% - 7.2%; Figures exclude the COVID-19 Vaccine Company expects 2023 Adjusted Reported Earnings Per Share (EPS) of $10.00 -"
+    },
+    {
+      "financebench_id": "financebench_id_01490",
+      "question_type": "novel-generated",
+      "question": "What is the amount of the gain accruing to JnJ as a result of the separation of its Consumer Health business segment, as of August 30, 2023?",
+      "answer": "JnJ will make a gain of approximately $20 billion from the separation of its Consumer Health business segment.",
+      "justification": "",
+      "evidence_excerpt": "Exhibit 99.1 Johnson & Johnson Announces Updated Financials and 2023 Guidance Following Completion of the Kenvue Separation Company expects increased 2023 Reported Sales Growth of 7.0% - 8.0%, Operational Sales Growth of 7.5% - 8.5%, and Adjusted Operational Sales Growth of 6.2% - 7.2%; Figures exclude the COVID-19 Vaccine Company expects 2023 Adjusted Reported Earnings Per Share (EPS) of $10.00 -"
+    },
+    {
+      "financebench_id": "financebench_id_01491",
+      "question_type": "novel-generated",
+      "question": "What is the amount of the cash proceeds that JnJ realised from the separation of Kenvue (formerly Consumer Health business segment), as of August 30, 2023?",
+      "answer": "JnJ realised $13.2 billion in cash proceeds from the separation of Kenvue.",
+      "justification": "",
+      "evidence_excerpt": "Exhibit 99.1 Johnson & Johnson Announces Updated Financials and 2023 Guidance Following Completion of the Kenvue Separation Company expects increased 2023 Reported Sales Growth of 7.0% - 8.0%, Operational Sales Growth of 7.5% - 8.5%, and Adjusted Operational Sales Growth of 6.2% - 7.2%; Figures exclude the COVID-19 Vaccine Company expects 2023 Adjusted Reported Earnings Per Share (EPS) of $10.00 -"
+    }
+  ],
+  "expected_risks": [],
+  "expected_recommendations": [
+    {
+      "expectation": "Analysis must provide at least two actionable recommendations grounded in figures reported in the statement."
+    },
+    {
+      "expectation": "Recommendations should address the company's ratio."
+    }
+  ]
+}

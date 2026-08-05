@@ -1,0 +1,51 @@
+{
+  "statement_id": "statement_06",
+  "doc_name": "ULTABEAUTY_2023Q4_EARNINGS",
+  "company": "Ulta Beauty",
+  "doc_type": "Earnings",
+  "doc_period": 2023,
+  "gics_sector": "Consumer Discretionary",
+  "pdf_path": "data\\raw_statements\\ULTABEAUTY_2023Q4_EARNINGS.pdf",
+  "expected_summary": "Ulta Beauty 2023 EARNINGS filing (Consumer Discretionary sector). An accurate summary must be consistent with these reported figures: What drove the reduction in SG&A expense as a percent of net sales in FY2023? -> Lower marketing expenses and leverage of incentive compensation due to higher sales. The answer here assumes FY2023 refers to the 12 months ended on January 28, 2023 (although the company refers to this period as its fiscal 2022.; What drove the increase in Ulta Beauty's merchandise inventories balance at end of FY2023? -> Increase in Merchandise inventories balance was driven by the opening of 47 new stores. The answer here assumes FY2023 refers to the 12 months ended on January 28, 2023 (although the company refers to this period as its fiscal 2022.; What percent of Ulta Beauty's total spend on stock repurchases for FY 2023 occurred in Q4 of FY2023? -> 36%. The answer here assumes FY2023 refers to the 12 months ended on January 28, 2023 (although the company refers to this period as its fiscal 2022.; Did Ulta Beauty's wages expense as a percent of net sales increase or decrease in FY2023? -> Wages expense as a percent of net sales increased in FY2023. The answer here assumes FY2023 refers to the 12 months ended on January 28, 2023 (although the company refers to this period as its fiscal 2022.",
+  "expected_facts": [
+    {
+      "financebench_id": "financebench_id_00601",
+      "question_type": "novel-generated",
+      "question": "What drove the reduction in SG&A expense as a percent of net sales in FY2023?",
+      "answer": "Lower marketing expenses and leverage of incentive compensation due to higher sales. The answer here assumes FY2023 refers to the 12 months ended on January 28, 2023 (although the company refers to this period as its fiscal 2022.",
+      "justification": "Fiscal 2022 = FY2023. Fiscal 2021 = FY2022.",
+      "evidence_excerpt": "For the Full Year of Fiscal 2022 Net sales increased 18.3% to $10.2 billion compared to $8.6 billion in fiscal 2021, primarily due to the favorable impact from the continued resilience of the beauty category, retail price increases, the impact of new brands and product innovation, increased social occasions, and fewer COVID-19 limitations compared to fiscal 2021. Comparable sales increased 15.6% c"
+    },
+    {
+      "financebench_id": "financebench_id_00603",
+      "question_type": "novel-generated",
+      "question": "What drove the increase in Ulta Beauty's merchandise inventories balance at end of FY2023?",
+      "answer": "Increase in Merchandise inventories balance was driven by the opening of 47 new stores. The answer here assumes FY2023 refers to the 12 months ended on January 28, 2023 (although the company refers to this period as its fiscal 2022.",
+      "justification": "Fiscal 2022 = FY2023. Fiscal 2021 = FY2022.",
+      "evidence_excerpt": "Balance Sheet Cash and cash equivalents at the end of the fourth quarter of fiscal 2022 were $737.9 million. Merchandise inventories, net at the end of the fourth quarter of fiscal 2022 totaled $1.6 billion compared to $1.5 billion at the end of the fourth quarter of fiscal 2021. The $104.2 million increase was primarily due to the opening of 47 new stores since January 29, 2022, inventory to supp"
+    },
+    {
+      "financebench_id": "financebench_id_00605",
+      "question_type": "novel-generated",
+      "question": "What percent of Ulta Beauty's total spend on stock repurchases for FY 2023 occurred in Q4 of FY2023?",
+      "answer": "36%. The answer here assumes FY2023 refers to the 12 months ended on January 28, 2023 (although the company refers to this period as its fiscal 2022.",
+      "justification": "Fiscal 2022 = FY2023. Fiscal 2021 = FY2022. Percent spent in Q4 of FY2023 = Amount spent in Q4 of FY2023/Total amount spent in FY2023*100 =$328.1 million /$900 million * 100 = 36%",
+      "evidence_excerpt": "Share Repurchase Program During the fourth quarter of fiscal 2022, the Company repurchased 722,457 shares of its common stock at a cost of $328.1 million. During fiscal 2022, the Company repurchased 2.2 million shares of its common stock at a cost of $900.0 million. As of January 28, 2023, $1.1 billion remained available under the $2.0 billion share repurchase program announced in March 2022."
+    },
+    {
+      "financebench_id": "financebench_id_00606",
+      "question_type": "novel-generated",
+      "question": "Did Ulta Beauty's wages expense as a percent of net sales increase or decrease in FY2023?",
+      "answer": "Wages expense as a percent of net sales increased in FY2023. The answer here assumes FY2023 refers to the 12 months ended on January 28, 2023 (although the company refers to this period as its fiscal 2022.",
+      "justification": "Fiscal 2022 = FY2023. Fiscal 2021 = FY2022. Store payroll and benefits = wages. Store payroll and benefits offsets reduction in SG&A percent of net sales in FY2023.",
+      "evidence_excerpt": "For the Full Year of Fiscal 2022 Net sales increased 18.3% to $10.2 billion compared to $8.6 billion in fiscal 2021, primarily due to the favorable impact from the continued resilience of the beauty category, retail price increases, the impact of new brands and product innovation, increased social occasions, and fewer COVID-19 limitations compared to fiscal 2021. Comparable sales increased 15.6% c"
+    }
+  ],
+  "expected_ratios": [],
+  "expected_risks": [],
+  "expected_recommendations": [
+    {
+      "expectation": "Analysis must provide at least two actionable recommendations grounded in figures reported in the statement."
+    }
+  ]
+}
