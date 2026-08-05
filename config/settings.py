@@ -72,6 +72,9 @@ LLM_BACKEND = os.getenv("LLM_BACKEND", "gemini")
 NUM_EVAL_STATEMENTS = int(os.getenv("NUM_EVAL_STATEMENTS", "20"))
 PROMPT_STRATEGIES = ["basic", "role_based", "structured", "few_shot"]
 
+# Pause between batch API calls to respect free-tier rate limits
+BATCH_SLEEP_SECONDS = float(os.getenv("BATCH_SLEEP_SECONDS", "10"))
+
 
 def validate() -> list[str]:
     """Return a list of configuration problems (empty list = all good)."""
