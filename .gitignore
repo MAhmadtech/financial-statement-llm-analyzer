@@ -1,0 +1,24 @@
+# Secrets
+.env
+
+# FinanceBench dataset clone (672 MB of PDFs; re-fetch from github.com/patronus-ai/financebench)
+financebench/
+
+# Copied evaluation PDFs (regenerate with scripts/build_ground_truth.py)
+data/raw_statements/*.pdf
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# OS / editor
+Thumbs.db
+.DS_Store
+.vscode/
+.idea/
+
+# Local artifacts
+*.log
