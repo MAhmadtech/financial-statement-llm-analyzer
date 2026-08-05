@@ -103,8 +103,13 @@ to write "not reported" rather than invent values.
 - Temperature 0.2; max output tokens 4,096; timeout (180 s on the
   experiment machine; 60 s default); 3 retry attempts with exponential
   backoff; token usage logged per call.
-- Statement text is truncated to 60,000 characters for prompting; the
-  truncation flag is stored per experiment.
+- Statements longer than 60,000 characters are reduced by a **financial
+  section selector**: the clean text is split into 3,000-character blocks,
+  each scored by financial-keyword frequency and digit density, and the
+  top-scoring blocks are kept in document order. On the 15 over-budget
+  filings this keeps 44/46 ground-truth values inside the prompt budget vs
+  37/46 for naive head-truncation (e.g. Verizon 0/2 -> 2/2, PepsiCo
+  2/4 -> 4/4). The reduction flag is stored per experiment.
 
 ### 3.5 Evaluation metrics
 1. **Fact extraction accuracy** - share of expected facts + ratios whose
@@ -172,9 +177,9 @@ Computed in sections 5a-5e of the notebook:
 - **Automated hallucination labeling** is a proxy (numeric grounding of JSON
   fields); it misses qualitative false claims and can flag legitimate
   derived values - true labeling is partly subjective.
-- **Prompt truncation** at 60k characters means very long 10-Ks are analyzed
-  from their opening sections (which contain the financial statements in
-  most filings, but not all).
+- **Prompt budget** of 60k characters means very long 10-Ks are analyzed
+  from their highest-density financial sections only; the section selector
+  still leaves ~4% of ground-truth values outside the prompt (2/46).
 
 ## 7. Deviations from the original plan
 

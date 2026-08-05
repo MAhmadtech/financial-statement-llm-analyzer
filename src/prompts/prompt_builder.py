@@ -11,8 +11,7 @@ from functools import lru_cache
 import yaml
 
 from config import settings
-
-TRUNCATION_MARKER = "\n\n[... statement truncated for length ...]"
+from src.preprocessing.section_selector import select_relevant_text
 
 
 @lru_cache(maxsize=1)
@@ -29,11 +28,9 @@ def get_active_version(strategy: str) -> str:
     return load_prompt_config()["strategies"][strategy]["active_version"]
 
 
-def _truncate(text: str) -> str:
-    limit = settings.MAX_INPUT_CHARS
-    if len(text) <= limit:
-        return text
-    return text[: limit - len(TRUNCATION_MARKER)] + TRUNCATION_MARKER
+def _fit_to_budget(text: str) -> tuple[str, bool]:
+    """Keep the most financially relevant sections within MAX_INPUT_CHARS."""
+    return select_relevant_text(text, settings.MAX_INPUT_CHARS)
 
 
 def build_prompt(
@@ -59,7 +56,7 @@ def build_prompt(
             f"Available: {list(versions)}"
         )
 
-    text = _truncate(statement_text)
+    text, reduced = _fit_to_budget(statement_text)
     prompt = versions[version]["template"].format(statement_text=text)
     prompt = prompt.rstrip() + "\n\n" + config["json_output_instruction"].rstrip()
 
@@ -67,5 +64,5 @@ def build_prompt(
         "strategy": strategy,
         "prompt_version": f"{strategy}_{version}",
         "prompt": prompt,
-        "statement_truncated": len(statement_text) > settings.MAX_INPUT_CHARS,
+        "statement_truncated": reduced,
     }
