@@ -1,0 +1,7 @@
+,fact_accuracy,fact_accuracy,fact_accuracy,completeness,completeness,completeness,hallucination_rate,hallucination_rate,hallucination_rate,response_time,response_time,response_time,user_rating,user_rating,user_rating
+,mean,std,count,mean,std,count,mean,std,count,mean,std,count,mean,std,count
+strategy,,,,,,,,,,,,,,,
+basic,0.4915,0.4019,20,1.0,0.0,20,0.0333,0.1026,20,4.5244,0.6385,20,,,0
+role_based,0.5069,0.3952,20,1.0,0.0,20,0.0424,0.1074,20,5.1936,0.8192,20,,,0
+structured,0.6258,0.326,20,1.0,0.0,20,0.0333,0.1026,20,7.6186,1.2403,20,,,0
+few_shot,0.5362,0.4025,20,1.0,0.0,20,0.0167,0.0745,20,4.4822,0.4938,20,,,0

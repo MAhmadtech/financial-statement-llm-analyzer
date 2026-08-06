@@ -65,8 +65,13 @@ def load_responses(
     if not settings.RESPONSES_DIR.exists():
         return records
     for path in sorted(settings.RESPONSES_DIR.glob("*.json")):
-        with open(path, encoding="utf-8") as f:
-            record = json.load(f)
+        try:
+            with open(path, encoding="utf-8") as f:
+                record = json.load(f)
+        except (json.JSONDecodeError, OSError):
+            # Interrupted write (crash/kill mid-save); skip, don't poison runs
+            print(f"WARNING: skipping unreadable response file {path.name}")
+            continue
         if statement_id and record.get("statement_id") != statement_id:
             continue
         if strategy and record.get("strategy") != strategy:

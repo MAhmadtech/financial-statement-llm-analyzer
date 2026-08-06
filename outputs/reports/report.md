@@ -146,7 +146,42 @@ to write "not reported" rather than invent values.
 > `notebooks/batch_experiments.ipynb` for the full analysis and charts
 > (accuracy / completeness / hallucination / response time comparisons).
 
-<!-- RESULTS_TABLE -->
+All 80 experiments (20 statements x 4 strategies) completed without API
+failures on `gemini-3.5-flash-lite`.
+
+| Strategy | Fact accuracy | Completeness | Hallucination rate | Response time (s) | Precision | Recall | F1 |
+|---|---|---|---|---|---|---|---|
+| Basic | 0.492 | 1.000 | 0.033 | 4.52 | 0.967 | 0.492 | 0.544 |
+| Role-based | 0.507 | 1.000 | 0.042 | 5.19 | 0.958 | 0.507 | 0.557 |
+| **Structured** | **0.626** | 1.000 | 0.033 | 7.62 | 0.967 | **0.626** | **0.693** |
+| Few-shot | 0.536 | 1.000 | **0.017** | **4.48** | **0.983** | 0.536 | 0.593 |
+
+**Key findings**
+
+1. **Structured prompting is the clear accuracy winner**: 0.626 mean fact
+   accuracy, a +27% relative improvement over the basic prompt (0.492), and
+   the best F1 (0.693). Forcing the nine-section skeleton with an explicit
+   "compute ratios and show your inputs" instruction makes the model surface
+   more of the expected figures. The cost is latency: 7.6 s mean vs ~4.5 s,
+   as responses are roughly twice as long.
+2. **Few-shot prompting is the faithfulness winner**: lowest hallucination
+   rate (0.017, half the basic rate), highest precision (0.983), and the
+   fastest responses (4.48 s). The worked example appears to anchor the
+   model to quote-reported-figures behavior, but it recovers fewer expected
+   facts than structured prompting (0.536).
+3. **The role-based persona adds almost nothing over basic** (0.507 vs
+   0.492 accuracy, slightly *higher* hallucination rate) - persona wording
+   alone, without structural constraints, does not change what the model
+   extracts.
+4. **Completeness saturated at 1.0 for all strategies** - the shared JSON
+   output contract (which demands Risks and Recommendations keys) already
+   guarantees topic coverage, so the checklist metric does not discriminate
+   between strategies in this setup. A stricter, depth-weighted completeness
+   measure is future work.
+5. **Accuracy variance is high across statements** (std ~0.33-0.40):
+   statements whose expected answers require multi-step arithmetic (CAGR,
+   ratio changes across years) score near zero for every strategy, while
+   direct-lookup statements score near one (see error analysis).
 
 Charts exported to `outputs/charts/` (PNG + PDF), summary table to
 `outputs/charts/strategy_summary.csv`.
