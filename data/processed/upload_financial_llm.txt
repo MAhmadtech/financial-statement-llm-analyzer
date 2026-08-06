@@ -1,0 +1,140 @@
+1. Problem Statement
+Large Language Models (LLMs) can assist in analyzing financial statements, but the
+quality of their responses depends heavily on how they are prompted. There is
+limited practical guidance on which prompting strategies produce the most
+accurate, complete, and reliable financial analyses. This project aims to evaluate
+different prompting techniques to identify the most effective approach for financial
+statement analysis.
+Relevance
+Prompt engineering is a fundamental aspect of LLM engineering because the quality
+of an LLM's output is directly influenced by the prompt design. In financial
+applications, inaccurate or incomplete responses can lead to incorrect interpretations
+of financial information. Evaluating different prompting strategies helps improve the
+reliability and consistency of LLM-based financial analysis while providing practical
+insights for real-world business applications.
+Domain
+Prompt Engineering
+LLM Evaluation
+Financial Document Understanding
+LLM Applications
+Risks & Fallback
+Technical Risk: Financial statements often contain complex tables and PDF layouts
+that may result in incorrect text extraction, affecting the quality of the LLM's
+analysis.
+Fallback Plan: If PDF extraction proves unreliable, the project will use clean text or
+CSV versions of the same financial statements. The evaluation of prompting
+strategies will remain unchanged, allowing the core objectives of the project to be
+completed successfully.
+2. Proposed Approach
+
+The proposed system will accept financial statements (Balance Sheet and Income
+Statement) in PDF format, extract the relevant text and financial information, and
+analyze them using a Large Language Model (LLM). Our system will evaluate 4
+different prompting strategies for financial statement analysis using the Large
+Language Model (LLM).
+The strategies include
+1. Basic Prompting, where the model is asked to analyze the financial statement
+directly.
+2. Role-Based Prompting, where the model is instructed to act as an experienced
+CPA/CA or financial analyst.
+3. Structured Prompting, where the model is guided to produce a predefined
+analysis covering key financial metrics such as revenue, expenses, profitability,
+financial ratios, and potential risks.
+4. Few-Shot Prompting, where the model is first provided with an example financial
+statement analysis before analyzing a new financial statement. The outputs from
+each prompting strategy will be compared using evaluation metrics such as
+accuracy, completeness, hallucination rate, and response time to determine the
+most effective prompting technique for financial statement analysis.
+Project Type
+Working Demo + Experimental Evaluation
+This project will include a functional web application for financial statement
+analysis and an experimental comparison of different prompting strategies using the
+same LLM.
+Models
+Primary Model
+Gemini 2.5 Flash
+Optional Comparison Model (if required)
+GPT-4.1 mini or Llama 3.1 8B Instruct
+The primary evaluation will use Gemini 2.5 Flash to ensure a consistent comparison
+across prompting strategies.
+
+Datasets / Benchmarks
+The project will use:
+Publicly available financial statements
+Sample balance sheets and income statements from accounting education
+resources.
+A small manually created evaluation dataset (10–20 financial statements) with
+expected outputs for comparison.
+Tools / Frameworks
+Python 3.11
+Streamlit
+Gemini API
+pdfplumber (or PyMuPDF) for PDF text extraction
+pandas for data processing
+Matplotlib for result visualization
+Jupyter Notebook for experiments
+What is Novel?
+Most existing financial document applications use a single prompting approach
+without evaluating its effectiveness. This project systematically compares multiple
+prompting strategies on the same financial statements using quantitative evaluation
+metrics such as accuracy, completeness, hallucination rate, and response time to
+identify the most effective prompt design.
+Compute Budget
+The development will be performed on a standard laptop (8–16 GB RAM) using
+Python and Streamlit. LLM inference will be provided through the Gemini API,
+eliminating the need for dedicated GPU hardware. Google Colab (Free Tier) may be
+used for experimentation and evaluation if needed.
+3. Related Work
+The proposed project builds upon existing research in financial language models,
+
+prompt engineering, and LLM-based document understanding. Previous studies
+have focused on developing domain-specific financial LLMs or improving financial
+question answering. However, limited work has systematically evaluated how
+different prompting strategies influence the quality of financial statement analysis
+using general-purpose LLMs. This project addresses that gap by comparing multiple
+prompting techniques and measuring their effectiveness using objective evaluation
+metrics.
+Reference (Title, Authors, Year)
+I. BloombergGPT: A Large Language Model for Finance – Wu et al., 2023
+BloombergGPT introduces a finance-specific LLM trained on financial data. In
+contrast, this project evaluates how prompt engineering can improve financial
+statement analysis using a general-purpose LLM without additional model training.
+II. FinGPT: Open-Source Financial Large Language Models – Yang et al., 2023
+FinGPT focuses on developing and fine-tuning open-source financial language
+models. This project instead compares multiple prompting strategies to improve
+analysis quality while using an existing LLM through an API.
+III. Prompt Engineering Guide – Lee Boonstra, Google, 2024
+The Prompt Engineering Guide describes various prompting techniques for LLMs.
+This project applies and experimentally evaluates those techniques in the financial
+statement analysis domain using quantitative performance metrics.
+4. Expected Deliverables
+Code Repository
+PDF/text extraction scripts
+Prompt templates
+Financial analysis engine
+Streamlit web application
+Evaluation scripts
+README with setup instructions
+
+Report
+Literature review
+Methodology
+Prompt designs
+Experimental setup
+Results and analysis
+Limitations
+Future work
+Demo
+A Streamlit application where the user will be able to perform below task.
+I. Uploads a financial statement.
+ii. Selects a prompting strategy.
+iii. Generates the analysis.
+iv. Compares the outputs.
+5. Evaluation Plan
+• Metric Baseline Target
+• Financial fact extraction accuracy Basic prompt: 75% Structured prompt:
+≥90%
+• Summary completeness Basic prompt: 70% Structured prompt: ≥90%
+• Hallucination rate 15% <5%
+• Response time 8 seconds <5 seconds
+• User rating (1–5) 3.5 ≥4.5
