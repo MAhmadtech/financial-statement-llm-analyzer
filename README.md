@@ -38,7 +38,7 @@ data/            raw_statements/, processed/, eval_dataset/ (ground truth),
                  expected_outputs/ (CSV fallbacks), clean_text_backup/
 src/
   extraction/    pdfplumber primary + PyMuPDF fallback
-  preprocessing/ header/footer removal, whitespace normalization
+  preprocessing/ header/footer removal, financial-section selector
   prompts/       versioned prompt builder (prompts.yaml)
   llm/           Gemini client (retries/timeout/token logging) + adapter stubs
   engine/        analyzer pipeline + response store (full metadata JSON)
@@ -72,9 +72,32 @@ Everything tunable lives in `config/settings.py`, overridable via `.env`:
 
 ## Results
 
-After a batch run: metrics per experiment in
-`outputs/experiments/evaluations.csv`, per-strategy summary and charts in
-`outputs/charts/`, full report in `outputs/reports/report.md`, and the
+**80/80 experiments succeeded** (20 statements x 4 strategies,
+`gemini-3.5-flash-lite`, temperature 0.2):
+
+| Strategy | Fact accuracy | Completeness | Hallucination rate | Response time (s) | F1 |
+|---|---|---|---|---|---|
+| Basic | 0.492 | 1.000 | 0.033 | 4.52 | 0.544 |
+| Role-based | 0.507 | 1.000 | 0.042 | 5.19 | 0.557 |
+| **Structured** | **0.626** | 1.000 | 0.033 | 7.62 | **0.693** |
+| Few-shot | 0.536 | 1.000 | **0.017** | **4.48** | 0.593 |
+
+Key findings:
+
+- **Structured prompting** (forced nine-section report) recovers the most
+  facts: +27% relative accuracy over the basic prompt, at ~1.7x the latency.
+- **Few-shot prompting** is the most faithful (half the hallucination rate
+  of basic, highest precision 0.983) and the fastest.
+- A **role-based persona alone changes almost nothing** versus the basic
+  prompt - structure beats persona.
+- Long filings are handled by a financial-section selector that keeps the
+  highest-density financial text within the 60k-char prompt budget
+  (44/46 ground-truth values retained vs 37/46 with naive truncation).
+- Pipeline verified on an unseen statement (NIKE 2021 10-K): extracted and
+  analyzed correctly with real reported figures.
+
+Full details: metrics per experiment in `outputs/experiments/evaluations.csv`,
+charts in `outputs/charts/`, research report in `outputs/reports/report.md`,
 analysis notebook in `notebooks/batch_experiments.ipynb`.
 
 ## Security

@@ -1,5 +1,14 @@
-# Secrets
+# Secrets - never commit credentials of any kind
 .env
+.env.*
+!.env.example
+*.key
+*.pem
+*_credentials*
+credentials*.json
+secrets*
+apikey*
+token*.txt
 
 # FinanceBench dataset clone (672 MB of PDFs; re-fetch from github.com/patronus-ai/financebench)
 financebench/
