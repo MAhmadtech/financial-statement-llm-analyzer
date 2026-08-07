@@ -32,11 +32,11 @@ task-specific adaptation matter more than parameter count - supports the
 premise here: careful *prompting* of an accessible commercial model may
 recover much of the benefit of specialized models at negligible cost.
 
-**Prompt Engineering Guide** (DAIR.AI, ongoing) systematizes strategies
-including zero-shot, role/persona, output-structuring, and few-shot
-prompting. It reports that structural constraints and worked examples
-generally improve faithfulness on extraction-style tasks - a hypothesis this
-project tests quantitatively in the financial domain.
+**Prompt Engineering Guide** (Boonstra, Google, 2024) systematizes
+strategies including zero-shot, role/persona, output-structuring, and
+few-shot prompting. It reports that structural constraints and worked
+examples generally improve faithfulness on extraction-style tasks - a
+hypothesis this project tests quantitatively in the financial domain.
 
 **FinanceBench** (Islam et al., 2023, Patronus AI) supplies the evaluation
 substrate: 10,231 question-answer pairs grounded in real filings (150 open
@@ -186,6 +186,23 @@ failures on `gemini-3.5-flash-lite`.
 Charts exported to `outputs/charts/` (PNG + PDF), summary table to
 `outputs/charts/strategy_summary.csv`.
 
+### Target vs. Actual
+
+The project proposal committed to five metrics with explicit baseline and
+target values. Fact extraction accuracy was not met. Basic scored 49.2%
+against a 75% baseline and Structured scored 62.6% against a 90% target,
+both lower than the proposal's pre-measurement estimates. Summary
+completeness was met but uninformative, saturating at 100% for every
+strategy with zero variance. Hallucination rate was met by all four
+strategies, ranging from 1.7% (few-shot) to 4.2% (role-based) against a
+target of under 5%. Response time was partially met. Basic (4.52s) and
+Few-shot (4.48s) came in under the 5-second target, Role-based (5.19s) came
+close, and Structured (7.62s) missed it. User rating was not collected, so
+it cannot be scored against its 3.5 baseline and 4.5 target (see section 7
+for disclosure). Notably, the strategy that performed best on accuracy
+(Structured) was also the slowest, showing a real accuracy-latency
+trade-off that the original plan did not anticipate.
+
 ## 5. Error Analysis
 
 Computed in sections 5a-5e of the notebook:
@@ -232,6 +249,12 @@ Computed in sections 5a-5e of the notebook:
   long-path support; the notebook itself is standard `.ipynb`.
 - **Second backend**: GPT-4.1 Mini / Llama adapters are interface stubs by
   scope decision; enabling them is a config flag plus one class.
+- **User rating**: the rating widget is implemented in the Streamlit app
+  (`app.py`, writing to `outputs/ratings.csv`) but requires a human to
+  review each analysis and click a 1-5 rating. The batch run (Phase 9) is
+  fully automated and does not exercise this widget, so no ratings were
+  collected during the 80-experiment run reported in section 4. The metric
+  is scored as not collected rather than estimated.
 
 ## 8. Future Work
 
@@ -253,7 +276,7 @@ Computed in sections 5a-5e of the notebook:
   Large Language Models.* arXiv:2306.06031.
 - Islam, P. et al. (2023). *FinanceBench: A New Benchmark for Financial
   Question Answering.* arXiv:2311.11944.
-- DAIR.AI. *Prompt Engineering Guide.* https://www.promptingguide.ai
+- Boonstra, L. (2024). *Prompt Engineering Guide.* Google.
 - Chen, Z. et al. (2021). *FinQA: A Dataset of Numerical Reasoning over
   Financial Data.* EMNLP 2021.
 - Zhu, F. et al. (2021). *TAT-QA: A Question Answering Benchmark on a Hybrid
