@@ -16,6 +16,14 @@ financebench/
 # Copied evaluation PDFs (regenerate with scripts/build_ground_truth.py)
 data/raw_statements/*.pdf
 
+# Ad-hoc documents uploaded through the Streamlit app's "Upload PDF" feature
+# (app.py names these "upload_<filename>"). These are manual test artifacts,
+# not part of the reproducible FinanceBench research dataset, and may
+# contain personal/sensitive content depending on what was uploaded.
+data/processed/upload_*
+data/clean_text_backup/upload_*
+outputs/responses/upload_*
+
 # Python
 __pycache__/
 *.pyc
